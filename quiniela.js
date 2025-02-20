@@ -2,9 +2,9 @@
 const resultadosReales = [
     { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 2, goles2: 1 },
     { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 3, goles2: 1 },
-    //{ equipo1: 'Francia', equipo2: 'España', goles1: 0, goles2: 0 },
-    //{ equipo1: 'Japon', equipo2: 'China', goles1: 0, goles2: 0 },
-    //{ equipo1: 'Italia', equipo2: 'Holanda', goles1: 0, goles2: 0 },
+    { equipo1: 'Francia', equipo2: 'España', goles1: 1, goles2: 2 },
+    { equipo1: 'Japon', equipo2: 'China', goles1: 0, goles2: 0 },
+    { equipo1: 'Italia', equipo2: 'Holanda', goles1: 1, goles2: 3 },
 ];
 
 // Predicciones de los participantes
@@ -12,21 +12,21 @@ const predicciones = {
     Luis: [
         { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 2, goles2: 0 },
         { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 1, goles2: 1 },
-        { equipo1: 'Francia', equipo2: 'España', goles1: 3, goles2: 2 },
-        { equipo1: 'Japon', equipo2: 'China', goles1: 0, goles2: 0 },
-        { equipo1: 'Italia', equipo2: 'Holanda', goles1: 1, goles2: 2 },
+        { equipo1: 'Francia', equipo2: 'España', goles1: 0, goles2: 2 },
+        { equipo1: 'Japon', equipo2: 'China', goles1: 0, goles2: 2 },
+        { equipo1: 'Italia', equipo2: 'Holanda', goles1: 2, goles2: 2 },
     ],
     Eduardo: [
         { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 1, goles2: 4 },
         { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 3, goles2: 0 },
         { equipo1: 'Francia', equipo2: 'España', goles1: 2, goles2: 2 },
-        { equipo1: 'Japon', equipo2: 'China', goles1: 1, goles2: 1 },
+        { equipo1: 'Japon', equipo2: 'China', goles1: 2, goles2: 1 },
         { equipo1: 'Italia', equipo2: 'Holanda', goles1: 3, goles2: 2 },
     ],
     Taty: [
         { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 2, goles2: 0 },
         { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 1, goles2: 1 },
-        { equipo1: 'Francia', equipo2: 'España', goles1: 3, goles2: 1 },
+        { equipo1: 'Francia', equipo2: 'España', goles1: 3, goles2: 2 },
         { equipo1: 'Japon', equipo2: 'China', goles1: 2, goles2: 2 },
         { equipo1: 'Italia', equipo2: 'Holanda', goles1: 1, goles2: 3 },
     ],
@@ -43,6 +43,34 @@ const predicciones = {
         { equipo1: 'Francia', equipo2: 'España', goles1: 3, goles2: 2 },
         { equipo1: 'Japon', equipo2: 'China', goles1: 1, goles2: 1 },
         { equipo1: 'Italia', equipo2: 'Holanda', goles1: 2, goles2: 3 },
+    ],
+    Luisito: [
+        { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 2, goles2: 2 },
+        { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 4, goles2: 3 },
+        { equipo1: 'Francia', equipo2: 'España', goles1: 1, goles2: 0 },
+        { equipo1: 'Japon', equipo2: 'China', goles1: 3, goles2: 1 },
+        { equipo1: 'Italia', equipo2: 'Holanda', goles1: 2, goles2: 1 },
+    ],
+    Leito: [
+        { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 2, goles2: 3 },
+        { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 0, goles2: 1 },
+        { equipo1: 'Francia', equipo2: 'España', goles1: 4, goles2: 3 },
+        { equipo1: 'Japon', equipo2: 'China', goles1: 3, goles2: 2 },
+        { equipo1: 'Italia', equipo2: 'Holanda', goles1: 0, goles2: 3 },
+    ],
+    Dante: [
+        { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 2, goles2: 4 },
+        { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 2, goles2: 2 },
+        { equipo1: 'Francia', equipo2: 'España', goles1: 2, goles2: 0 },
+        { equipo1: 'Japon', equipo2: 'China', goles1: 1, goles2: 0 },
+        { equipo1: 'Italia', equipo2: 'Holanda', goles1: 1, goles2: 2 },
+    ],
+    Toto: [
+        { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 1, goles2: 1 },
+        { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 2, goles2: 3 },
+        { equipo1: 'Francia', equipo2: 'España', goles1: 2, goles2: 2 },
+        { equipo1: 'Japon', equipo2: 'China', goles1: 2, goles2: 3 },
+        { equipo1: 'Italia', equipo2: 'Holanda', goles1: 2, goles2: 1 },
     ],
 };
 
@@ -102,13 +130,16 @@ for (const resultado of resultadosReales) {
 }
 
 // Calcular y mostrar los puntos de cada participante
-const participantes = ['Luis', 'Eduardo', 'Taty', 'Mamá', 'Papá'];
+const participantes = ['Luis', 'Eduardo', 'Taty', 'Mamá', 'Papá', 'Luisito', 'Leito', 'Dante', 'Toto'];
 const resultados = {};
 
 for (const participante of participantes) {
     const puntos = calcularPuntosTotales(participante, resultadosReales, predicciones);
     resultados[participante] = puntos;
 }
+
+// Ordenar los participantes de mayor a menor
+const participantesOrdenados = participantes.sort((a, b) => resultados[b] - resultados[a]);
 
 // Mostrar los resultados en la página
 const resultadosDiv = document.getElementById('resultados');

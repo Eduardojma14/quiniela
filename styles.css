@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #dbe9ddee;
+    background-color: #abd7ffee;
     color: #333;
     text-align: center;
     padding: 20px;
@@ -12,9 +12,9 @@ h1, h2 {
 
 /* Contenedor flexible */
 .contenedor-flex {
-    display: flex; /* Activa Flexbox */
-    justify-content: space-between; /* Espacio entre las columnas */
-    margin-top: 20px;
+    display: flex; 
+    justify-content: space-between;
+    gap: 10px
 }
 
 /* Columnas */
@@ -26,6 +26,21 @@ h1, h2 {
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Estilos para el contenedor con scroll */
+.scroll-resultados-puntos {
+    max-height: 300px; /* Altura máxima antes de que aparezca el scroll */
+    overflow-y: auto; /* Activa el scroll vertical */
+    padding-right: 5px/* Espacio para el scroll */
+}
+
+.contenedor-predicciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px
+}
+
+
 
 #resultados, #predicciones {
     margin-top: 20px;
