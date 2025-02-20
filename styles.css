@@ -1,13 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #dbe9ddee;
     color: #333;
     text-align: center;
     padding: 20px;
 }
 
 h1, h2 {
-    color: #007BFF;
+    color: #000000;
+}
+
+/* Contenedor flexible */
+.contenedor-flex {
+    display: flex; /* Activa Flexbox */
+    justify-content: space-between; /* Espacio entre las columnas */
+    margin-top: 20px;
+}
+
+/* Columnas */
+.columna-izquierda, .columna-centro, .columna-derecha {
+    width: 30%; /* Ancho de cada columna */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #resultados, #predicciones {
@@ -19,17 +36,21 @@ h1, h2 {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px auto;
+    margin: 5px auto;
     width: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .ganador {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    background-color: #72dd8b;
+    border-color: #155724;
     color: #155724;
 }
 
+:hover.ganador {
+    background-color: #155724;
+    color: #fff;
+}
 .prediccion h3 {
     margin-top: 0;
     color: #333;

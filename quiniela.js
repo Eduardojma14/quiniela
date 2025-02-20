@@ -1,10 +1,10 @@
 // Resultados reales de los partidos (simulados)
 const resultadosReales = [
-    { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 1, goles2: 4 },
-    { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 0, goles2: 0 },
-    { equipo1: 'Francia', equipo2: 'España', goles1: 2, goles2: 2 },
-    { equipo1: 'Japon', equipo2: 'China', goles1: 1, goles2: 1 },
-    { equipo1: 'Italia', equipo2: 'Holanda', goles1: 2, goles2: 3 },
+    { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 2, goles2: 1 },
+    { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 3, goles2: 1 },
+    //{ equipo1: 'Francia', equipo2: 'España', goles1: 0, goles2: 0 },
+    //{ equipo1: 'Japon', equipo2: 'China', goles1: 0, goles2: 0 },
+    //{ equipo1: 'Italia', equipo2: 'Holanda', goles1: 0, goles2: 0 },
 ];
 
 // Predicciones de los participantes
@@ -18,7 +18,7 @@ const predicciones = {
     ],
     Eduardo: [
         { equipo1: 'Brasil', equipo2: 'Argentina', goles1: 1, goles2: 4 },
-        { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 0, goles2: 0 },
+        { equipo1: 'Venezuela', equipo2: 'Chile', goles1: 3, goles2: 0 },
         { equipo1: 'Francia', equipo2: 'España', goles1: 2, goles2: 2 },
         { equipo1: 'Japon', equipo2: 'China', goles1: 1, goles2: 1 },
         { equipo1: 'Italia', equipo2: 'Holanda', goles1: 3, goles2: 2 },
@@ -87,6 +87,18 @@ function calcularPuntosTotales(participante, resultadosReales, predicciones) {
         puntosTotales += puntosPartido;
     }
     return puntosTotales;
+}
+
+// Mostrar los resultados reales en la página
+const resultadosRealesDiv = document.getElementById('resultados-reales');
+
+for (const resultado of resultadosReales) {
+    const resultadoDiv = document.createElement('div');
+    resultadoDiv.className = 'resultado-real';
+    resultadoDiv.innerHTML = `
+        <p>${resultado.equipo1} ${resultado.goles1} - ${resultado.goles2} ${resultado.equipo2}</p>
+    `;
+    resultadosRealesDiv.appendChild(resultadoDiv);
 }
 
 // Calcular y mostrar los puntos de cada participante
