@@ -27,6 +27,24 @@ h1, h2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Contenedor de predicciones */
+.contenedor-predicciones {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    padding: 10px;
+    gap: 10px;
+}
+
+/* Estilos para cada predicción */
+.prediccion {
+    flex: 1 1 calc(25% - 10px); /* 4 participantes por línea con espacio entre ellos */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
 /* Estilos para el contenedor con scroll */
 .scroll-resultados-puntos {
     max-height: 300px; /* Altura máxima antes de que aparezca el scroll */
@@ -66,11 +84,4 @@ h1, h2 {
     background-color: #155724;
     color: #fff;
 }
-.prediccion h3 {
-    margin-top: 0;
-    color: #333;
-}
 
-.prediccion p {
-    margin: 5px 0;
-}
